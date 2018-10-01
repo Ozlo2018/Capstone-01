@@ -4,16 +4,16 @@ body {
   background:#eee;
 }
 
-.wrapper {
+.container-fluid {
   position: absolute;
   top: 10%;
   left: 40%;
   width: 300px;
   height: 500px;
   perspective: 900px;
+  z-index: 0;
 }
-
-.container {
+.card {
   position: absolute;
   top: 0%;
   width: 100%;
@@ -49,11 +49,20 @@ body {
   box-shadow: 0px 20px 100px #555;
 }
 
-.container:hover {
+.card:hover {
   cursor: pointer;
   transform: rotate(0deg) scale(1) translateY(10px);
   transition: .5s all ease;
   z-index: 400;
+}
+.card-text:last-child {
+    margin-bottom: 1em;
+    padding: 2em;
+}
+.card-title {
+    position: absolute;
+    top: 10%;
+    margin: auto;
 }
 
 .image {
@@ -167,7 +176,7 @@ span {
   opacity: 0.3;
 }
 
-.story {
+.card-body {
   position: absolute;
   top: 45%;
   left: 0%;
@@ -186,12 +195,18 @@ span {
   background: linear-gradient(to top, #90AFC5 0%, #336B87 120%);
 }
 
-.info {
+.card-title {
   position: absolute;
   top: 10%;
 }
 
 h3 {
+  text-align: center;
+  text-shadow: 0px 0px 10px #eee;
+  color: #eee;
+  letter-spacing: 2px;
+}
+h5 {
   text-align: center;
   text-shadow: 0px 0px 10px #eee;
   color: #eee;
@@ -223,7 +238,7 @@ p {
   letter-spacing: 1px;
 
 }
-.info{
+.card-text{
   text-overflow: hidden;
 } 
 
